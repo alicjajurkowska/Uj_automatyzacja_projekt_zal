@@ -7,6 +7,8 @@ import selenium.uj.project.utils.BaseProperties;
 
 public class AddObservedTagTest extends DefaultTest{
 
+//Alicja Jurkowska
+
     @Test
     public void successObservedTagTest(){
         ObservedTag observedTag = new ObservedTag(driver, logger);

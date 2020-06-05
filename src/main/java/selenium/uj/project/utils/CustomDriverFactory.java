@@ -29,21 +29,18 @@ public class CustomDriverFactory {
     public WebDriver getConfiguredDriver(String browserType, long implicitlyWait, boolean windowMaximize) {
         WebDriver driver;
         if (browserType.equalsIgnoreCase(BaseProperties.CHROME_BROWSER_TYPE)) {
-            // Zdefiniowanie ścieżki dla zewnętrznego drivera przeglądarki Chrome
             System.setProperty("webdriver.chrome.driver", customFile.getResourceFilePathString(BaseProperties.CHROME_DRIVER_FILE_NAME));
-            driver = new ChromeDriver(); // inicjalizacja przeglądarką Chrome
+            driver = new ChromeDriver();
         } else if (browserType.equalsIgnoreCase(BaseProperties.FIREFOX_BROWSER_TYPE)) {
-            // Zdefiniowanie ścieżki dla zewnętrznego drivera przeglądarki Firefox
             System.setProperty("webdriver.gecko.driver", customFile.getResourceFilePathString(BaseProperties.FIREFOX_DRIVER_FILE_NAME));
-            driver = new FirefoxDriver(); // inicjalizacja przeglądarką Firefox
+            driver = new FirefoxDriver();
         } else {
-            // Zdefiniowanie ścieżki dla zewnętrznego drivera przeglądarki Chrome
             System.setProperty("webdriver.chrome.driver", customFile.getResourceFilePathString(BaseProperties.CHROME_DRIVER_FILE_NAME));
-            driver = new ChromeDriver(); // inicjalizacja przeglądarką Chrome
+            driver = new ChromeDriver();
         }
         driver.manage().timeouts().implicitlyWait(implicitlyWait, TimeUnit.SECONDS); // ustawienie czasu oczekiwania na elementy
         if (windowMaximize) {
-            driver.manage().window().maximize(); // maksymalizacja okna
+            driver.manage().window().maximize();
         }
         return driver;
     }

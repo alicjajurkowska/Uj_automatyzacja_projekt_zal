@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import selenium.uj.project.pages.ObservedTag;
 import selenium.uj.project.pages.ObservedUser;
 
+//Paweł Sikora
+
 public class AddObservedUserTest extends DefaultTest {
 
     @Test

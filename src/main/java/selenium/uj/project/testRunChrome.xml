@@ -10,6 +10,7 @@
             <class name="selenium.uj.project.tests.LoginTest"/>
             <class name="selenium.uj.project.tests.AddObservedTagTest"/>
             <class name="selenium.uj.project.tests.AddObservedUserTest"/>
+            <class name="selenium.uj.project.tests.AddEmptyDiscoveryTest"/>
         </classes>
     </test>
 </suite>

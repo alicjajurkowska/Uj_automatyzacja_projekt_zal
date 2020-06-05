@@ -7,6 +7,9 @@ import selenium.uj.project.utils.BaseProperties;
 
 public class LoginTest extends DefaultTest {
 
+
+//Alicja Jurkowska
+
     @Test
     public void successLoginTest() {
 

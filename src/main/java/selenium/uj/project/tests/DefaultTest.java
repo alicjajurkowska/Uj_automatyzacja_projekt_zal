@@ -34,14 +34,14 @@ public abstract class DefaultTest {
                 CustomFile.getProjectPath() +
                         BaseProperties.REPORTS_DIRECTORY_NAME +
                         new Date().getTime() + "_" + BaseProperties.REPORT_FILE_NAME, false)
-                .addSystemInfo("Test type", "Regression");// opcjonalne informacje do raportu
+                .addSystemInfo("Test type", "Regression");
 
         driver = new CustomDriverFactory().getConfiguredDriver(
                 browserType,
                 Long.parseLong(implicitlyWait),
                 windowMaximize.equalsIgnoreCase("true")
         );
-        driver.get(BaseProperties.BASE_URL); // wejście na stronę
+        driver.get(BaseProperties.BASE_URL);
     }
 
     @BeforeClass
@@ -82,7 +82,7 @@ public abstract class DefaultTest {
 
     @AfterSuite
     public void tearDown() {
-        driver.quit(); // zabicie drivera i zamknięcie przeglądarki
+        driver.quit();
 
         extentReports.flush();
         extentReports.close();

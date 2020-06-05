@@ -18,7 +18,6 @@ public abstract class DefaultPage {
     }
 
     protected void fillElement(WebElement element, String value) {
-        // OPCJONALNIE - dodać oczekiwanie na element
         logger.info(CustomTestLog.getElementMessage(element, CustomTestLog.CLEAR_ACTION));
         element.clear();
 
@@ -27,13 +26,11 @@ public abstract class DefaultPage {
     }
 
     protected void clickElement(WebElement element) {
-        // OPCJONALNIE - dodać oczekiwanie na element
         logger.info(CustomTestLog.getElementMessage(element, CustomTestLog.CLICK_ACTION));
         element.click();
     }
 
     protected void selectCheckbox(WebElement element, boolean checked) {
-        // OPCJONALNIE - dodać oczekiwanie na element
         if (!element.isSelected()) {
             if (checked) {
                 logger.info(CustomTestLog.getElementMessage(element, CustomTestLog.CLICK_ACTION));
@@ -48,7 +45,7 @@ public abstract class DefaultPage {
     }
 
     protected boolean isElementDisplayed(WebElement element) {
-        // OPCJONALNIE - dodać oczekiwanie na element
+
 
         logger.info(CustomTestLog.getElementMessage(element, CustomTestLog.IS_DISPLAYED_ACTION));
         return element.isDisplayed();
